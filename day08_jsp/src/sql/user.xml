@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- config관련된 것들 다 mapper로 수정 -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 쿼리문 작성 -->
+<mapper namespace="User">
+	<insert id="join" parameterType="hashmap">
+		INSERT INTO WEB.TBL_USER (USERID, USERPW, USERNAME, USERGENDER, USERPHONE, POSTCODE, ADDR, DETAILADDR, EXTRAADDR)
+		VALUES(#{userid}, #{userpw}, #{username}, #{usergender}, #{userphone}, #{postcode}, #{addr}, #{detailaddr,jdbcType=VARCHAR}, #{extraaddr})
+	</insert>
+
+</mapper>
